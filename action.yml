@@ -1,0 +1,19 @@
+name: Build an RPM
+description: Build an RPM with just a .spec file and a few parameters.
+author: Robert de Bock <robert@meinit.nl>
+
+inputs:
+  specfile:
+    description: The name (including local path) of the specfile..
+    required: true
+ 
+runs:
+  using: docker
+  image: 'docker://robertdebock/github-action-rpmbuild'
+  env:
+    specfile: ${{ inputs.specfile }}
+    source: ${{ inputs.source }}
+
+branding:
+  icon: play  
+  color: green
