@@ -20,6 +20,8 @@ The RPM spec file.
 
 ## Example usage
 
+`.github/workflows/rpmbuild.yml`:
+
 ```yaml
 ---
 on:

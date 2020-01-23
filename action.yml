@@ -9,11 +9,12 @@ inputs:
  
 runs:
   using: docker
-  image: 'docker://robertdebock/github-action-rpmbuild'
+  image: Dockerfile
+  # image: 'docker://robertdebock/github-action-rpmbuild'
   env:
     specfile: ${{ inputs.specfile }}
     source: ${{ inputs.source }}
 
 branding:
-  icon: play  
+  icon: box
   color: green
