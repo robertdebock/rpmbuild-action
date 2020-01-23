@@ -9,7 +9,7 @@ This action expects the following structure:
 ```
 .
 ├── SPECS/my.spec
-└── SOURCES/my.tar.gz
+└── SOURCES/my-1.0.0.tar.gz
 ```
 
 ## Inputs

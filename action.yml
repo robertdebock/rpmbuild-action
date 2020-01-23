@@ -13,7 +13,6 @@ runs:
   # image: 'docker://robertdebock/github-action-rpmbuild'
   env:
     specfile: ${{ inputs.specfile }}
-    source: ${{ inputs.source }}
 
 branding:
   icon: box
