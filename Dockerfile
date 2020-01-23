@@ -6,5 +6,4 @@ RUN dnf install -y rpmdevtools dnf-utils && \
     dnf clean all && \
     rm -r -f /var/cache/*
 
-CMD cd ${GITHUB_REPOSITORY} ; \
-    rpmbuild -ba ${specfile}
+CMD rpmbuild -ba SPECS/*.spec
