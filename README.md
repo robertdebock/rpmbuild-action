@@ -8,9 +8,8 @@ This action expects the following structure:
 
 ```
 .
-├── my.spec
-└── SOURCES
-    └── my.zip # or .tar.gz
+├── SPECS/my.spec
+└── SOURCES/my.tar.gz
 ```
 
 ## Inputs
