@@ -1,6 +1,6 @@
 # RPMbuild action
 
-A GitHub action to build an RPM with just a .spec file and a few parameters.
+A GitHub action to build an RPM.
 
 ## Requirements
 
@@ -8,15 +8,12 @@ This action expects the following structure:
 
 ```
 .
-├── SPECS/my.spec
-└── SOURCES/my-1.0.0.tar.gz
+├── README.md
+├── SOURCES
+│   └── my-1.0.0.tar.gz
+└── SPECS
+    └── my.spec
 ```
-
-## Inputs
-
-### `specfile`
-
-The RPM spec file.
 
 ## Example usage
 
@@ -24,6 +21,8 @@ The RPM spec file.
 
 ```yaml
 ---
+name: Build RPM
+
 on:
   - push
 
@@ -32,6 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
+        uses: actions/checkout@v2
       - name: rpmbuild
         uses: robertdebock/rpmbuild-action@1.0.0
 ```
