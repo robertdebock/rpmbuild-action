@@ -2,6 +2,16 @@
 
 A GitHub action to build an RPM.
 
+## Inputs
+
+### `distribution`
+
+The distribution to run on. Currently supported:
+
+- [`centos-7`](https://github.com/robertdebock/docker-github-action-rpmbuild/tree/centos-7)
+- [`centos-8`](https://github.com/robertdebock/docker-github-action-rpmbuild/tree/master) (default)
+- [`fedora-31`](https://github.com/robertdebock/docker-github-action-rpmbuild/tree/fedora-31)
+
 ## Requirements
 
 This action expects the following structure:
@@ -33,5 +43,5 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: rpmbuild
-        uses: robertdebock/rpmbuild-action@1.0.0
+        uses: robertdebock/rpmbuild-action@1.1.0
 ```

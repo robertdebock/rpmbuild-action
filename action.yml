@@ -2,9 +2,15 @@ name: Build an RPM
 description: Build an RPM.
 author: Robert de Bock <robert@meinit.nl>
 
+inputs:
+  distribution:
+    description: The distribution to run the build on.
+    required: false
+    default: centos-8
+
 runs:
   using: docker
-  image: 'docker://robertdebock/github-action-rpmbuild'
+  image: 'docker://robertdebock/github-action-rpmbuild:${{ inputs.distribution }}'
 
 branding:
   icon: box
