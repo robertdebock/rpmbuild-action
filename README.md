@@ -27,6 +27,8 @@ This action expects the following structure:
 
 ## Example usage
 
+A full example can be found in [this my_rpm example](https://github.com/robertdebock/my_rpm).
+
 `.github/workflows/rpmbuild.yml`:
 
 ```yaml
@@ -43,5 +45,5 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: rpmbuild
-        uses: robertdebock/rpmbuild-action@1.1.0
+        uses: robertdebock/rpmbuild-action@1.1.1
 ```
