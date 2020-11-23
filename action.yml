@@ -1,3 +1,4 @@
+---
 name: Build an RPM
 description: Build an RPM on different distributions.
 author: Robert de Bock <robert@meinit.nl>
