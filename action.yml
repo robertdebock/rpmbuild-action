@@ -9,9 +9,11 @@ inputs:
     required: false
     default: centos-8
 
-runs:
-  using: docker
-  image: 'docker://robertdebock/github-action-rpmbuild:${{ inputs.distribution }}'
+job:
+  steps:
+    - name: run container
+      uses: addnab/docker-run-action@v3
+      image: 'docker://robertdebock/github-action-rpmbuild:${{ inputs.distribution }}'
 
 branding:
   icon: box
